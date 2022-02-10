@@ -11,4 +11,8 @@ input[type=checkbox]:checked ~ label {
   text-decoration: line-through;
 }
 
+h1 {
+  text-align: center;
+}
+
 /*# sourceMappingURL=styles.css.map */
