@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+input[type=checkbox] {
+  font-size: 2rem;
+}
+
+input[type=checkbox]:checked ~ label {
+  color: green;
+  text-decoration: line-through;
+}
+
+/*# sourceMappingURL=styles.css.map */
