@@ -9,17 +9,152 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1><span lang="en">Unit tests</span> пищов</h1>
+    <h1><span lang="en">Unit tests</span> пищови</h1>
     <form action="#">
-        <input type="reset" value="Премахни всички зачерквания">
-        <div class="group">
-            <input type="checkbox" id="1">
-            <label for="1">Тествай за правилен резултат с негранични стойности (стойности, различни от 0 и т.н.)</label>
-        </div>
-        <div class="group">
-            <input type="checkbox" id="2">
-            <label for="2">Тествай за правилен резултат с гранични стойности (0 и т.н.)</label>
-        </div>
+        <fieldset>
+            <legend>Генерални тестове за функции</legend>
+            <input type="reset" value="Премахни всички зачерквания">
+            <div class="group">
+                <input type="checkbox" id="1">
+                <label for="1">Тествай за правилен резултат с негранични стойности (стойности, различни от 0 и т.н.)</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="2">
+                <label for="2">Тествай за правилен резултат с гранични стойности (0 и т.н.)</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="3">
+                <label for="3">Тествай функцията без никакви аргументи</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="4">
+                <label for="4">Тествай функцията с аргументи от грешен тип (напр. тествай с число, когато се изисква стринг и т.н.)</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="5">
+                <label for="5">Тествай функцията няколко пъти с различни грешни типове аргументи (един тест с число, един с булева стойност и т.н.)</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="6">
+                <label for="6">Тествай дали функцията хвърля грешка при дадени обстоятелства (<strong>СЪВЕТ:</strong> опаковай функцията в друга функция, иначе програмата ще прекъсне ако хвърли грешка!)</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="7">
+                <label for="7">Тествай дали функцията <strong>НЕ</strong> хвърля грешка при дадени обстоятелства</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="8">
+                <label for="8">Тествай дали функцията работи правилно след като е повикана многократно (т.е. викни функцията няколко пъти в един тест)</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="9">
+                <label for="9">Ако функцията приема повече от един параметър, подай само една част от аргументите</label>
+            </div>
+        </fieldset>
     </form>
+    <form action="">
+        <fieldset>
+            <legend>Тестове за специфични/гранични случаи</legend>
+            <input type="reset" value="Премахни всички зачерквания">
+            <div class="group">
+                <input type="checkbox" id="10">
+                <label for="10">Тествай с празен стринг</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="11">
+                <label for="11">Тествай с 0</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="12">
+                <label for="12">Тествай с положително число</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="13">
+                <label for="13">Тествай с отрицателно число</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="14">
+                <label for="14">Тествай с число с плаваща запетая (и/или отрицателен еквивалент)</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="15">
+                <label for="15">Тествай функцията многократно; един тест с положително число, един с отрицателно и т.н.</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="16">
+                <label for="16">Тествай с <code lang="en">true</code> и/или <code lang="en">false</code></label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="17">
+                <label for="17">Тествай с празен масив и/или празен обект</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="18">
+                <label for="18">Тествай с <code lang="en">undefined</code>, <code lang="en">null</code> и/или <code lang="en">NaN</code></label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="19">
+                <label for="19">Тествай дали функцията връща <code lang="en">undefined</code>, <code lang="en">null</code> или <code lang="en">NaN</code> при подаване на "лоши" аргументи</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="20">
+                <label for="20">Ако функцията очаква масив с еднородни типове данни, подай масив с различни типове данни</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="21">
+                <label for="21">При работа с четни и нечетни стойности, тествай и двата типа стойности и дали функцията правилно връща стойности от двата типа</label>
+            </div>
+            
+        </fieldset>
+    </form>
+    <form action="">
+        <fieldset>
+            <legend>Тестове за класове, <span lang="en">factory</span> функции и подобни</legend>
+            <input type="reset" value="Премахни всички зачерквания">
+            <div class="group">
+                <input type="checkbox" id="22">
+                <label for="22">Тествай дали функцията връща обект</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="23">
+                <label for="23">Тествай дали функцията връща нови инстанции на обекти (направи два обекта, направи промяна на един и виж дали са еднакви)</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="24">
+                <label for="24">Тествай дали обектът има дадено свойство/даден метод</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="25">
+                <label for="25">Тествай дали даден метод е функция</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="26">
+                <label for="26">Тествай дали всеки метод работи поотделно</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="27">
+                <label for="27">Тествай наведнъж всички методи и функционалности на класа/обекта (<strong>СЪВЕТ:</strong> не опитвай да "елиминираш" резултатите от един метод с друг метод; направи такъв тест, че всеки метод видно да води до промяна)</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="28">
+                <label for="28">Тествай дали обект е инстанция на даден клас</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="29">
+                <label for="29">Тествай дали <span lang="en">getter</span>-ите на класа работят както трябва</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="30">
+                <label for="30">Тествай дали <span lang="en">setter</span>-ите на класа работят както трябва</label>
+            </div>
+            <div class="group">
+                <input type="checkbox" id="31">
+                <label for="31">Тествай дали статичен метод е статичен (тоест може да бъде повикан само от класа, а не от инстанциите му)</label>
+            </div>
+        </fieldset>
+    </form>
+    <p><strong>Забележка:</strong> следните пищови се отнасят за генерални случаи. В зависимост от задачата, може да има тестове, които да не фигурират тук, за които трябва да се сетиш 
+    (напр. <code lang="en">indexOf</code> да връща -1).
+    Този инструмент не дава никаква гаранция, че ще си изкараш задачата с 100/100 или че авторът ще помага/подсказва/решава задачите на други хора.</p>
 </body>
 </html>
